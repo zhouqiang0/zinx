@@ -20,7 +20,7 @@ func main() {
 
 	for {
 		//2 调用Write方法 写数据
-		_, err := conn.Write([]byte("HEllo Zinx V0.1..."))
+		_, err := conn.Write([]byte("HEllo Zinx V0.4..."))
 		if err != nil {
 			fmt.Println("client write conn err ", err)
 			return

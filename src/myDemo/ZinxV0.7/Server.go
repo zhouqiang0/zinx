@@ -38,7 +38,7 @@ func (h *HelloRouter) Handle(request ziface.IRequest) {
 	fmt.Println("recv from client: msgID: ", request.GetMsgId(),
 		", data=", string(request.GetData()))
 
-	err := request.GetConnection().SendMsg(1, []byte("hello welcome to zinx-v0.6"))
+	err := request.GetConnection().SendMsg(1, []byte("hello welcome to zinx-v0.7"))
 	if err != nil {
 		fmt.Println(err)
 	}
@@ -46,7 +46,7 @@ func (h *HelloRouter) Handle(request ziface.IRequest) {
 
 func main() {
 	//1 创建一个server句柄，使用Zinx的api
-	s := znet.NewServer("[zinx V0.6]")
+	s := znet.NewServer("[zinx V0.7]")
 
 	//3 给当前zinx框架添加自定义router
 	s.AddRouter(0, &PingRouter{})
